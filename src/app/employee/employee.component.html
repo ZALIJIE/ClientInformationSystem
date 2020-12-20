@@ -1,0 +1,25 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Employee Name</th>
+      <th scope="col">Designation</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor ="let employee of employees" >
+        <td >{{ employee.id }}</td>
+        <a [routerLink]="['interaction/', employee.id]">
+            <td>{{ employee.empName }}</td>
+        </a>
+        <td>{{ employee.designation}}</td>
+    </tr>
+    </tbody>
+</table>
+
+
+<!-- <div *ngFor ="let employee of employees">
+    <div>
+        {{employee.empName}}
+    </div>
+</div> -->

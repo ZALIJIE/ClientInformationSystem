@@ -1,0 +1,28 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Employee Name</th>
+      <th scope="col">Employee Designation</th>
+      <th scope="col">Client Name</th>
+      <th scope="col">Client Email</th>
+      <th scope="col">Client Phone</th>
+      <th scope="col">Interview Type</th>
+      <th scope="col">Interview Date</th>
+      <th scope="col">Remarks</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor ="let interaction of interactions" >
+        <td>{{ interaction.interactionId }}</td>
+        <td>{{interaction.employeeName}}</td>
+        <td>{{interaction.employeeDesignation}}</td>
+        <td>{{interaction.clientName}}</td>
+        <td>{{interaction.clientEmail}}</td>
+        <td>{{interaction.clientPhone}}</td>
+        <td>{{interaction.intType}}</td>
+        <td>{{interaction.intDate}}</td>
+        <td>{{interaction.remarks}}</td>
+    </tr>
+    </tbody>
+</table>

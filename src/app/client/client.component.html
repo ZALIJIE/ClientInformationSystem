@@ -1,0 +1,20 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Client Name</th>
+      <th scope="col">Client Phone</th>
+      <th scope="col">Address</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor ="let client of clients" >
+        <td >{{ client.clientId }}</td>
+        <a [routerLink]="['interaction/', client.clientId]">
+            <td>{{ client.clientName }}</td>
+        </a>
+        <td>{{ client.clientPhone}}</td>
+        <td>{{ client.clientAddress}}</td>
+    </tr>
+    </tbody>
+</table>

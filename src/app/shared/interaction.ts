@@ -1,3 +1,4 @@
+//interaction object
 export interface Interaction {
     interactionId: number;
     employeeName: string;

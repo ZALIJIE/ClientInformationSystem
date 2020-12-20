@@ -24,7 +24,6 @@ export class ApiService {
       .pipe(map((resp) => resp as any[]));
   }
    
-  //http://localhost:4200/api/movies/1
   getOne(path: string, id?: number): Observable<any> {
     let getUrl: string;
     if (id) {
@@ -34,4 +33,17 @@ export class ApiService {
     }
     return this.http.get(getUrl).pipe(map((resp) => resp as any));
   }
+  
+  //For post method
+  create(path: string, resource: any, options?: any): Observable<any> {
+    return this.http
+      .post(`${environment.apiUrl}${path}`, resource, { headers: this.header })
+      .pipe(map((response) => response));
+  }
+
+  // update(path: string, resource:any, options?:any):Observable<any>{
+  //   return this.http.put(`${environment.apiUrl}${path}`, resource).map(response=>{
+
+  //   })
+  // }
 }
